@@ -1,0 +1,2 @@
+# Practical-Understanding-of-Difference-Between-Linear-Regression-and-Classification
+ i am gonna implement both Linear Regression for a regression task and Logistic Regression for a classification task. i will also compare their differences in terms of their outputs, interpretation, and performance. Through this we can explore the appropriateness of using these models for regression vs classification problems.
