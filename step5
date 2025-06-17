@@ -1,0 +1,28 @@
+1. OUTPUT COMPARISON
+Linear Regression (from step 2)
+Goal: Predict continuous values (e.g., sepal width from sepal length).
+Output: Real numbers (like 2.54, 3.12, etc.)
+
+Not suitable for classification because:
+  Output isn’t bounded between 0 and 1.
+  May predict negative or >1 values when misused for binary classification.
+
+y_pred_linear = model.predict(X_test)  # Continuous outputs like 2.8, 3.4
+
+2. LOGISTIC REGRESSION (from step 3)
+Goal: Predict class membership (e.g., Setosa or Versicolor).
+Output: Probabilities between 0 and 1 (can be thresholded to predict class).
+
+Suitable for classification.
+
+probabilities = logreg.predict_proba(X_test_bin)[:, 1]  # e.g., 0.92, 0.13
+predicted_class = logreg.predict(X_test_bin)  # e.g., 1 or 0
+
+Table: Summary of Output Differences
+ Model	                Output Type	          Range	    Use Case
+Linear Regression	     Continuous values	   (-∞, +∞)	  Regression
+Logistic Regression	   Probability	         [0, 1]	    Classification
+
+Final Conclusion
+Use Linear Regression for predicting quantities.
+Use Logistic Regression for binary or multi-class classification, where you care about class probability or decision boundaries.
